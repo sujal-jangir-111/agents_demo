@@ -1,0 +1,11 @@
+uagents
+uagents-core
+httpx
+cosmpy
+python-dotenv
+pytest
+pytest-asyncio
+respx
+fastapi
+uvicorn
+pyyaml
