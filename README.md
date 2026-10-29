@@ -8,7 +8,7 @@ It operates completely locally without external address databases or paid maps A
 
 ## Architecture Diagram
 
-```mermaid
+
 flowchart TD
     Raw["Raw Free-Text Address (ID + Address)"] --> Norm["1. normalize.py\n(Hindi Transliteration, Abbreviation Expansion, Number Preservation)"]
     Norm --> Ext["2. extract.py\n(Rule-based Regex: Flat, Building, Road, Locality, City, PIN)"]
@@ -26,7 +26,7 @@ flowchart TD
     RevQueue -->|Human Decision: Approve/Reject| Group
     Group --> Rep["6. representative.py\n(Most Complete Real Record Consensus)"]
     Rep --> Output["Final Delivery Point Groups & Metrics"]
-```
+
 
 ---
 
@@ -195,5 +195,6 @@ Open your browser at: **`http://localhost:5173`** (API requests are automaticall
    - The current transliteration engine natively supports Hindi (Devanagari) to Roman mapping. Extending phonetics to Kannada, Tamil, Telugu, and Malayalam will further improve non-Hindi regional accuracy.
 3. **Compound Unit Numbers**:
    - Unusual formats like *"Old No. 12, New No. 45/A"* are extracted, but full historical mapping between renumbered municipalities requires historical cadastral cross-reference tables.
-#   d e l i v e r y h e l p e r  
+#   d e l i v e r y h e l p e r 
+ 
  
